@@ -1,4 +1,4 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import express from 'express'
 import helmet from 'helmet'
 import hpp from 'hpp'
@@ -8,9 +8,7 @@ import { setUpSessions, tearDownSessions } from '@/services/sessionService'
 import { errorHandler } from '@/middlewares/errorHandler'
 import * as auth from '@/utils/guard'
 
-dotenv.config()
-
-const port = process.env.APP_PORT ?? 3000
+const port = process.env.APP_PORT
 
 const app = express()
 
